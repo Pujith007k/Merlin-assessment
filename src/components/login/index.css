@@ -1,0 +1,126 @@
+.mainContainer{
+    display:flex;
+    flex-direction: row;
+}
+.boardContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#000000 ;
+    height:100vh;
+    width:40vw;
+    background-size: cover;
+}
+.boardName{
+    color:#ffffff;
+    height:88px;
+    width:246px;
+    font-family:'Montserrat';
+    font-weight: 700;
+    font-size: 72px;
+
+}
+.signInContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#F5F5F5;
+    height:100vh;
+    width:60vw;
+    background-size: cover;
+
+}
+.signInHeader{
+    height:44px;
+    width:131px;
+    color:#000000;
+    font-family:'Montserrat' ;
+    font-weight: 700;
+    font-size: 36px;
+
+}
+.signInParagraph{
+    height:19px;
+    width:161px;
+    font-family:'Lato' ;
+    font-weight: 400;
+    font-size: 16px;
+    color:#000000;
+}
+
+.loginFormContainer{
+    width:385px;
+    height:317px;
+    border-radius:20px;
+    background-color:#ffffff;
+    display:flex;
+    flex-direction: column;
+    
+}
+.usernameContainer{
+    height:60px;
+    width:325px;
+    display:flex;
+    flex-direction: column;
+    margin:15px;
+
+}
+.passwordContainer{
+    height:60px;
+    width:325px;
+    display:flex;
+    flex-direction: column;
+    margin:15px;
+}
+.label{
+    height:19px;
+    width:96px;
+    color:#000000;
+    font-family: 'Lato';
+    font-weight: 400px;
+    font-size: 16px;
+    
+}
+.input{
+    background-color: #F5F5F5;
+    height:40px;
+    width:325px;
+    color:#000000;
+    border-width:0px;
+    border-radius:10px;
+   
+}
+.forgotPassword{
+    width:124px;
+    height:19px;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    color:#346BD4;
+    margin:15px;
+
+}
+.signInButton{
+    height:40px;
+    width:325px;
+    background-color: #000000;
+    color:#ffffff;
+    border-radius:10px;
+    font-family: 'Montserrat';
+    margin:15px;
+    font-size: 16px;
+
+}
+.registerContainer{
+    height:19px;
+    width:261px;
+    font-family:'Lato';
+    font-weight:400px;
+    font-size:16px;
+
+
+}
+.spanRegister{
+    color:#346BD4;
+}
