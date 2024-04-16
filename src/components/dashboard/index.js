@@ -184,6 +184,23 @@ class Dashboard extends PureComponent{
                         </ResponsiveContainer>
 
                     </div>
+                    <div className="chronoContainer">
+                        <div className="chrono-container">
+                            <Chrono mode="VERTICAL"  disableNavOnKey theme={{primary: 'red',secondary: 'blue',}}>
+                                <div>
+                                    <h5>Meeting with suppliers from Kuta Bali</h5>
+                                    <p>14.00-15.00</p>
+                                    <p>at Sunset Road,Kuta,Bali</p>
+        
+                                </div>
+                                <div>
+                                    <h5>Check operation at Giga Factory 1</h5>
+                                    <p>18.00-20.00</p>
+                                    <p>at Central Jakarta</p>
+                                </div>
+                            </Chrono>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
