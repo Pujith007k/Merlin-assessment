@@ -245,7 +245,38 @@
     display:flex;
 }
 .chrono-container {
-    width: 500px;
-    height: 400px;
+    width: 550px;
+    height: 350px;
     background-color: #ffffff;
+    border-radius: 20px;
+    margin-top:10px;
+  }
+  .chornoHeading{
+    margin-left:25px;
+    margin-top:10px;
+  }
+  .scheduleHeading{
+    color:#666666;
+  }
+  .scheduleTime{
+    color:#999999;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .MainContainer{
+    display:flex;
+    flex-direction: row;
+
+}
+.sideBarContainer{
+    display:none;
+    flex-direction: column;
+    background-color: #000000;
+    border-radius:20px;
+    height:100vh;
+    width:15vw;
+    color:#ffffff;
+    align-items: center;
+    margin:10px;
+}
   }

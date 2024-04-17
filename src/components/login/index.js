@@ -1,20 +1,43 @@
-import {Component} from 'react'
-
 import { GoogleLogin } from '@react-oauth/google';
+import React, { useState } from 'react';
+import {jwtDecode} from 'jwt-decode'
+import { useNavigate } from 'react-router-dom';
 import './index.css'
 
-class Login extends Component{
-  
+const Login =()=>{
+    let navigate = useNavigate();
 
-   responseMessage = (response) => {
-        console.log(response);
+    const [Email,setEmail]=useState('')
+    const [Password,setPassword]=useState('')
+
+    const responseMessage = (response) => {
+        const jwtToken=jwtDecode(response.credential)
+        console.log(jwtToken);
+        
+        localStorage.setItem("jwtToken", jwtToken);
+        navigate('/');
+        
+        
     }
 
-   errorMessage = (error) => {
+    const errorMessage = (error) => {
         console.log(error);
     }
+    const submitEmail=(event)=>{
+        setEmail(event.target.value)
+    }
 
-    render(){
+    const submitPassword=(event)=>{
+        setPassword(event.target.value)
+    }
+
+    const submitForm=(event)=>{
+     event.preventDefault()
+     const userDetails={Email,Password}
+     console.log(userDetails)
+    }
+
+    
         return (
             <div className="mainContainer">
                 <div className="boardContainer">
@@ -26,10 +49,10 @@ class Login extends Component{
                     <p className="signInParagraph">Sign in to your account</p>
                     <div className="loginWithGoogle">
 
-                     <GoogleLogin onSuccess={this.responseMessage} onError={this.errorMessage} />
+                     <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
                      
                     </div>
-                    <form className="loginFormContainer "> 
+                    <form className="loginFormContainer " onSubmit={submitForm}> 
                         <div className="usernameContainer">
                             <label htmlFor="emailInput" className="label">
                                 Email Address
@@ -39,7 +62,8 @@ class Login extends Component{
                             type="text"
                             placeholder="Email"
                             className="input"
-                           
+                            onChange={submitEmail}
+                            value={Email}
                             />
                         </div>
                         <div className="passwordContainer">
@@ -51,18 +75,20 @@ class Login extends Component{
                             type="password"
                             placeholder="Password"
                             className="input"
-                           
+                            onChange={submitPassword}
+                            value={Password}
                             />
                         </div>
                         <p className="forgotPassword">Forgot password?</p>
-                        <button className="signInButton">Sign In</button>
+                        <button type="button" className="signInButton">Sign In</button>
                     </form>
                     <p className="registerContainer">Don't have an account? <span className="spanRegister"> Register here</span></p>
                 </div>
 
             </div>
+            
         )
     }
-}
+
 
 export default Login

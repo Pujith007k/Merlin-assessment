@@ -186,17 +186,20 @@ class Dashboard extends PureComponent{
                     </div>
                     <div className="chronoContainer">
                         <div className="chrono-container">
-                            <Chrono mode="VERTICAL"  disableNavOnKey theme={{primary: 'red',secondary: 'blue',}}>
+                            <h4 className="chornoHeading">Today's Schedule</h4>
+                            <Chrono mode="VERTICAL" disableInteraction='false' slideItemDuration='3000' disableToolbar='false' enableQuickJump='false' cardHeight={120} cardWidth={400} theme={{primary: 'lightgreen',secondary: 'blue',cardBgColor: '#F5F5F5',
+    titleColor: 'black',
+    titleColorActive: 'red',}}>
                                 <div>
-                                    <h5>Meeting with suppliers from Kuta Bali</h5>
-                                    <p>14.00-15.00</p>
-                                    <p>at Sunset Road,Kuta,Bali</p>
+                                    <h5 className="scheduleHeading">Meeting with suppliers from Kuta Bali</h5>
+                                    <p className="scheduleTime">14.00-15.00</p>
+                                    <p className="scheduleTime">at Sunset Road,Kuta,Bali</p>
         
                                 </div>
                                 <div>
-                                    <h5>Check operation at Giga Factory 1</h5>
-                                    <p>18.00-20.00</p>
-                                    <p>at Central Jakarta</p>
+                                    <h5 className="scheduleHeading">Check operation at Giga Factory 1</h5>
+                                    <p className="scheduleTime">18.00-20.00</p>
+                                    <p className="scheduleTime">at Central Jakarta</p>
                                 </div>
                             </Chrono>
                         </div>
